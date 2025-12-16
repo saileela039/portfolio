@@ -1,0 +1,351 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* GLOBAL RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #000;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/*  HOME PAGE */
+.container {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+/* Logo */
+.logo {
+    position: absolute;
+    top: 30px;
+    left: 40px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo .circle {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-weight: 600;
+}
+
+.logo .brand {
+    color: #ff003c;
+    letter-spacing: 2px;
+}
+
+/* Name */
+.name {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    text-align: right;
+    color: #ff003c;
+    font-weight: 600;
+}
+
+.name p:hover {
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+/* Vertical Menu */
+.menu {
+    position: absolute;
+    right: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.menu a {
+    writing-mode: vertical-rl;
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 2px;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.menu a:hover {
+    color: #ff003c;
+}
+
+/* Hero Center */
+.hero {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 420px;
+    height: 420px;
+    display: grid;
+    place-items: center;
+}
+
+/* Ring */
+.ring {
+    position: absolute;
+    inset: 0;
+    border: 10px solid #ff003c;
+    border-radius: 100%;
+    filter: drop-shadow(0 0 25px #ff003c);
+    z-index: 1;
+    transition: transform 0.3s ease;
+    height: 105%;
+}
+
+.ring:hover {   
+    transform: scale(1.05);
+}
+
+/* Hero Image */
+.hero img {
+    position: absolute;
+    bottom: 0;
+    left: 45%;
+    transform: translateX(-50%);
+    height: 420px;
+    z-index: 2;
+    border-radius: 60%;
+    transition: transform 0.3s ease;
+
+}
+
+.hero img:hover {
+    transform: translateX(-50%) scale(1.05);
+    
+}
+
+/* Bottom Info */
+.info {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+}
+
+.info h3 {
+    font-weight: 400;
+}
+
+.info span {
+    color: #ff003c;
+}
+
+/* Social */
+.social {
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    display: flex;
+    gap: 20px;
+    color: #ff003c;
+}
+
+.social span {
+    cursor: pointer;
+}
+
+.social span:hover {
+    text-decoration: underline;
+}
+
+/* COMMON PAGE STYLES */
+.page {
+    min-height: 100vh;
+    padding: 100px 120px;
+}
+
+.page-title {
+    font-size: 48px;
+    letter-spacing: 4px;
+    color: #ff003c;
+    margin-bottom: 40px;
+}
+
+.page-text {
+    max-width: 700px;
+    line-height: 1.8;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+/* PROJECTS PAGE */
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    border: 1px solid #ff003c;
+    padding: 25px;
+}
+
+.project-card h3 {
+    margin-bottom: 10px;
+    color: #ff003c;
+}
+
+.project-card p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* CONTACT PAGE */
+.contact-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact-header {
+    margin-bottom: 50px;
+}
+
+.subtitle {
+    color: #aaa;
+    font-size: 15px;
+    max-width: 500px;
+}
+
+/* Grid */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: center;
+}
+
+/* Info */
+.contact-info p {
+    margin-bottom: 20px;
+    line-height: 1.7;
+    font-size: 15px;
+}
+
+.contact-info strong {
+    display: block;
+    color: #ff003c;
+    margin-bottom: 4px;
+}
+
+/* Form */
+.contact-form {
+    max-width: 520px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    background: transparent;
+    border: 1px solid #ff003c;
+    padding: 12px;
+    color: white;
+    outline: none;
+}
+
+.contact-form textarea {
+    height: 120px;
+    resize: none;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #777;
+}
+
+.contact-form button {
+    background: #ff003c;
+    color: white;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+    background: #e60034;
+}
+
+
+.download-btn,
+.hire-btn,
+.back-btn {
+    display: inline-block;
+    padding: 12px 28px;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: 1px solid #ff003c;
+    background: transparent;
+    color: white;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    margin: 10px 0;
+}
+
+.download-btn:hover {
+    background: #ff003c;
+    color: black;
+}
+
+.hire-btn {
+    background: #ff003c;
+    color: black;
+}
+
+.hire-btn:hover {
+    background: transparent;
+    color: white;
+}
+
+.back-btn {
+    border-color: white;
+}
+
+.back-btn:hover {
+    background: white;
+    color: black;
+}
+
+.button-group {
+    margin-top: 35px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+
+@media (max-width: 900px) {
+    .menu {
+        display: none;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .page {
+        padding: 80px 40px;
+    }
+}
